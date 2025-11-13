@@ -288,9 +288,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 statNumbers.forEach(stat => {
                     const text = stat.textContent;
                     if (text.includes('GPA')) {
-                        animateCounter(stat, 9.32 * 10, 2500);
-                    } else if (text.includes('Rank')) {
-                        animateCounter(stat, 4, 2000);
+                        animateCounter(stat, 9.4 * 10, 2500);
+                    } else if (text.includes('Researcher')) {
+                        animateCounter(stat, 1, 2000);
                     } else if (text.includes('Projects')) {
                         animateCounter(stat, 4, 1500);
                     }
