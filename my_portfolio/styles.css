@@ -916,6 +916,30 @@ body {
     font-weight: bold;
 }
 
+.project-github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #FFE135;
+    color: #000000;
+    border: 3px solid #000000;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.project-github-link:hover {
+    background-color: #000000;
+    color: #FFE135;
+}
+
+.project-github-link i {
+    font-size: 1.1rem;
+}
+
 /* Writing Section */
 .writing {
     padding: 60px 0;
