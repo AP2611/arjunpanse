@@ -252,6 +252,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
 
+    // Spline bot cursor-follow interactivity
+    const splineWrapper = document.getElementById('spline-bot-wrapper');
+    if (splineWrapper) {
+        document.addEventListener('mousemove', function(e) {
+            const rect = splineWrapper.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            const x = (e.clientX - centerX) / (rect.width / 2);
+            const y = (e.clientY - centerY) / (rect.height / 2);
+            const tiltX = Math.max(-12, Math.min(12, -y * 12));
+            const tiltY = Math.max(-12, Math.min(12, x * 12));
+            splineWrapper.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+        });
+        splineWrapper.addEventListener('mouseleave', function() {
+            splineWrapper.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+        });
+        splineWrapper.style.transition = 'transform 0.15s ease-out';
+    }
+
     // Parallax effect for hero section
     const hero = document.querySelector('.hero');
     window.addEventListener('scroll', function() {

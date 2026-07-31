@@ -309,12 +309,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
-.hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Spline Bot - no background box */
+.spline-bot-wrapper {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    perspective: 1000px;
+    flex-shrink: 0;
+}
+
+.spline-viewer {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    cursor: grab;
+}
+
+.spline-viewer:active {
+    cursor: grabbing;
 }
 
 /* Game Boy Console Container */
@@ -1432,6 +1449,11 @@ body {
         font-size: 24px;
     }
     
+    .spline-bot-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+    
     .typing-text {
         font-size: 28px;
     }
@@ -1481,6 +1503,11 @@ body {
 }
 
 @media (max-width: 480px) {
+    .spline-bot-wrapper {
+        width: 240px;
+        height: 240px;
+    }
+    
     .hero-title {
         font-size: 18px;
     }

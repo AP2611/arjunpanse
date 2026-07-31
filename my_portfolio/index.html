@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.60/build/spline-viewer.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -78,6 +79,16 @@
                 </div>
             </div>
             <div class="hero-image">
+                <div class="spline-bot-wrapper" id="spline-bot-wrapper">
+                    <spline-viewer
+                        url="https://prod.spline.design/5jbgeuHs8Z4pGjq8/scene.splinecode"
+                        loading="eager"
+                        loading-anim
+                        hint
+                        events-target="local"
+                        class="spline-viewer">
+                    </spline-viewer>
+                </div>
                 <div class="gameboy-console">
                     <div class="profile-card">
                         <div class="profile-avatar">
@@ -350,6 +361,30 @@
                         <li>Integrated multi-threaded architecture and caching for improved efficiency</li>
                     </ul>
                     <a href="https://github.com/AP2611/Briefly" target="_blank" rel="noopener noreferrer" class="project-github-link"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div class="project-period">2025</div>
+                    </div>
+                    <h3 class="project-title">JalSakhi — AI-Powered Precision Agriculture Platform</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Expo</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                    <ul class="project-description">
+                        <li>Smart water management platform for sustainable farming with AI-driven predictions and 7-day forecasts</li>
+                        <li>ML microservices for crop water needs, soil moisture forecasting, and village-level water allocation</li>
+                        <li>Mobile-first app with multilingual support (EN/HI/MR) and AI chatbot for farmer assistance</li>
+                    </ul>
+                    <a href="https://github.com/AP2611/jalsakhi-ai-powered-precision-agriculture-platform" target="_blank" rel="noopener noreferrer" class="project-github-link"><i class="fab fa-github"></i> View on GitHub</a>
                 </div>
             </div>
         </div>
